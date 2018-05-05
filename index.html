@@ -16,6 +16,7 @@
         font-family: monospace;
         font-size: 5vw;
         font-weight: bold;
+        text-shadow: 0.1vw 0.1vw 0.4vw black;
       }
     </style>
   </head>
@@ -33,6 +34,7 @@
         container.style.backgroundColor = colors[i];
         i = (i + 1) % 2;
         container.style.color = colors[i];
+        container.style.textShadow = "0.1px 0.1px 0.4vw " + colors[i];
       }, 1000);
     </script>
   </body>
