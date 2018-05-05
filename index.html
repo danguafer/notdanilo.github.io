@@ -28,7 +28,7 @@
       setInterval(function() {
         var not = ["&nbsp;", "!"];
         var rand = function(not) { return not[Math.floor(Math.random() * 10000000) % 2]; };
-        var text = rand(not) + "danilo " + rand(not) + "= " + rand(not) + "danilo";
+        var text = rand(not) + "danilo " + rand(not) + "= " + rand(not) + "danilo&nbsp;";
         container.innerHTML = text;
         container.style.backgroundColor = colors[i];
         i = (i + 1) % 2;
