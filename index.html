@@ -1,1 +1,39 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>danilo = !danilo</title>
+    <style>
+      html, body {
+        margin: 0px;
+        height: 100%;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: monospace;
+        font-size: 1.5cm;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">danilo = !danilo</div>
+    <script>
+      var container = document.getElementById("container");
+      var colors = [ "black", "white" ];
+      var i = 0;
+      setInterval(function() {
+        var not = ["", "!"];
+        var rand = function(not) { return not[Math.floor(Math.random() * 10000000) % 2]; };
+        var text = rand(not) + "danilo " + rand(not) + "= " + rand(not) + "danilo";
+        container.innerHTML = text;
+        container.style.backgroundColor = colors[i];
+        i = (i + 1) % 2;
+        container.style.color = colors[i];
+      }, 500);
+    </script>
+  </body>
+</html>
